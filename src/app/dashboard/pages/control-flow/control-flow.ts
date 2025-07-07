@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
+type Grade = 'A'|'B'|'C'|'D'|'F';
 
 @Component({
   selector: 'app-control-flow',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   templateUrl: './control-flow.html'
 })
 export default class ControlFlow {
+
+  public showContent = signal(false);
+  public grade = signal<Grade>('A');
+
+  public changeContent(){
+    this.showContent.update(value => !value);
+  }
 
 }
