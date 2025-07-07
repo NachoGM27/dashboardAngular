@@ -3,6 +3,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@shared/*": ["./src/app/shared"],
+      "@dashboard/*": ["./src/app/dashboard"],
+      "@services/*": ["./src/app/services"],
+      "@interfaces/*": ["./src/app/interfaces"],
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
